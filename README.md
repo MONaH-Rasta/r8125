@@ -4,7 +4,7 @@ dkms source for 2.5G/5G Ethernet LINUX driver r8125
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/MONaH-Rasta/r8125?sort=semver&style=for-the-badge)
 
-This repo provides lazy/easy way of having Realtek 2.5G/5G Ethernet LINUX r8125 driver in DKMS way so that you can keep the this driver even after the kernel upgrade.
+This repo provides lazy/easy way of having Realtek 2.5G/5G Ethernet LINUX r8125 driver in DKMS way so that you can keep this driver even after the kernel upgrade.
 
 ## Before use
 
@@ -16,7 +16,7 @@ The simplest way:
 
 ```bash
 cd /tmp
-wget -q https://github.com/MONaH-Rasta/r8125/releases/download/latest/r8125_amd64.deb
+wget -q https://github.com/MONaH-Rasta/r8125/releases/latest/download/r8125_amd64.deb
 sudo dpkg -i r8125_amd64.deb
 ```
 
@@ -47,7 +47,7 @@ Should be something like this:
 If kernel driver in use is still r8169 even after reboot, then use `r8125.conf` file to override.
 
 ```bash
-sudo wget -q -O "/etc/modprobe.d/r8125.conf" https://github.com/MONaH-Rasta/r8125/releases/download/latest/
+sudo wget -q -O "/etc/modprobe.d/r8125.conf" https://github.com/MONaH-Rasta/r8125/blob/main/r8125.conf
 sudo update-initramfs -u
 sudo reboot
 ```

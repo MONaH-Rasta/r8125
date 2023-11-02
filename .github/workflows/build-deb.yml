@@ -33,6 +33,6 @@ jobs:
       - name: Upload Release Assets
         run: |
           TAG=$(echo "${GITHUB_REF}" | sed 's/refs\/tags\///')
-          gh release upload $TAG /home/runner/work/r8125/r8125/src/r8125_*.deb
+          gh release upload $TAG /home/runner/work/r8125/r8125/src/r8125_*.deb --clobber r8125_amd64.deb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
