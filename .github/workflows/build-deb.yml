@@ -27,7 +27,7 @@ jobs:
         run: |
           cd src
           sudo make
-          sudo checkinstall --pkgname=r8125 --pkgversion=$VERSION --default
+          sudo checkinstall --pkgname=r8125 --pkgversion=$VERSION --pkgdesc="2.5G/5G Ethernet LINUX driver" --pkgrel=0 --default
         working-directory: ${{ github.workspace }}
 
       - name: Upload Release Assets
