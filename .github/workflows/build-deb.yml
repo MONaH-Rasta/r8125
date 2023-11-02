@@ -1,0 +1,38 @@
+name: Build deb package
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential checkinstall
+        env:
+          DEBIAN_FRONTEND: noninteractive
+
+      - name: Set VERSION variable from tag
+        run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+
+      - name: Build deb package
+        run: |
+          cd src
+          sudo make
+          sudo checkinstall --pkgname=r8125 --pkgversion=$VERSION --default
+        working-directory: ${{ github.workspace }}
+
+      - name: Upload Release Assets
+        run: |
+          TAG=$(echo "${GITHUB_REF}" | sed 's/refs\/tags\///')
+          gh release upload $TAG /home/runner/work/r8125/r8125/src/r8125_*.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
