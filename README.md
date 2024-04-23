@@ -4,7 +4,7 @@ dkms source for 2.5G Ethernet LINUX driver r8125
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/MONaH-Rasta/r8125?sort=semver&style=for-the-badge)
 
-This repo provides lazy/easy way of having Realtek 2.5G/5G Ethernet LINUX r8125 driver in DKMS way so that you can keep this driver even after the kernel upgrade.
+This repo provides lazy/easy way of having Realtek 2.5G Ethernet LINUX r8125 driver in DKMS way so that you can keep this driver even after the kernel upgrade.
 
 ## Before use
 
