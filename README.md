@@ -1,6 +1,6 @@
 # r8125
 
-dkms source for 2.5G/5G Ethernet LINUX driver r8125
+dkms source for 2.5G Ethernet LINUX driver r8125
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/MONaH-Rasta/r8125?sort=semver&style=for-the-badge)
 
@@ -31,17 +31,17 @@ Should be something like this:
 ```shell
 ...
 04:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)
-	Subsystem: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller
-	Kernel driver in use: r8125
-	Kernel modules: r8169, r8125
+ Subsystem: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller
+ Kernel driver in use: r8125
+ Kernel modules: r8169, r8125
 06:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)
-	Subsystem: ASUSTeK Computer Inc. RTL8125 2.5GbE Controller
-	Kernel driver in use: r8125
-	Kernel modules: r8169, r8125
+ Subsystem: ASUSTeK Computer Inc. RTL8125 2.5GbE Controller
+ Kernel driver in use: r8125
+ Kernel modules: r8169, r8125
 07:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 02)
-	Subsystem: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
-	Kernel driver in use: r8169
-	Kernel modules: r8169
+ Subsystem: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+ Kernel driver in use: r8169
+ Kernel modules: r8169
 ```
 
 If kernel driver in use is still r8169 even after reboot, then use `r8125.conf` file to override.
@@ -62,4 +62,4 @@ GPL-2 on Realtek driver and the debian packaing.
 
 ## References
 
-- [Realtek PCIe FE / GBE / 2.5G / 5G Ethernet Family Controller Software page](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software)
+- [Realtek PCIe FE / GBE / 2.5G / 5G Ethernet Family Controller Software page](https://www.realtek.com/Download/List?cate_id=584)
