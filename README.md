@@ -19,6 +19,13 @@ cd /tmp
 wget -q https://github.com/MONaH-Rasta/r8125/releases/latest/download/r8125_amd64.deb
 sudo dpkg -i r8125_amd64.deb
 ```
+The simplest way on opensuse:
+
+```bash
+zypper addrepo https://download.opensuse.org/repositories/home:cabelo:multicortex/15.6/home:cabelo:multicortex.repo
+zypper refresh
+zypper install r8125-kmp-default r8125-ueficer r8125-blacklist
+```
 
 ## Check current driver
 
